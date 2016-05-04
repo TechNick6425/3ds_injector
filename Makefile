@@ -19,7 +19,7 @@ include $(DEVKITARM)/3ds_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	source
+SOURCES		:=	source source/fatfs source/fatfs/sdmmc
 DATA		:=	data
 INCLUDES	:=	include
 
