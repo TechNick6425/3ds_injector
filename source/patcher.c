@@ -401,9 +401,13 @@ int patch_code(u64 progid, u8 *code, u32 size)
     // End region-free patch
     
     // Load modules from SD card.
-    char path[30];
-    sprintf(&path[0], "/modules/%016X.bin", progid);
-    fileRead(code, path, size);
+    if(configLoaded() != 1) loadConfig();
+        
+    if(LOAD_MODULES) {
+        char path[30];
+        sprintf(&path[0], "/modules/%016X.bin", progid);
+        fileRead(code, path, size);
+    }
     
     return 0;
 }

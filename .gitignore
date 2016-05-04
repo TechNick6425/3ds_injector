@@ -1,2 +1,3 @@
 build/*
-3ds_injector.*
+loader.*
++loader.rsf

@@ -39,4 +39,6 @@ typedef struct firmHeader {
     firmSectionHeader section[4];
 } firmHeader;
 
+#define BIT(x) (1 << x)
+
 #endif
